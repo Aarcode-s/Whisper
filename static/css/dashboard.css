@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
+
+/* Main container */
+.dashboard {
+    max-width: 400px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Card blocks */
+.card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Join button */
+.btn.join {
+    background: #facc15;
+    color: #000;
+}
+
+.btn.join:hover {
+    background: #eab308;
+}
+
+/* Create button */
+.btn.create {
+    background: #ef4444;
+}
+
+.btn.create:hover {
+    background: #dc2626;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+    .dashboard {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    input, button {
+        width: 100%;
+        margin: 6px 0;
+    }
+}

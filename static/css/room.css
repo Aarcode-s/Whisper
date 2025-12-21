@@ -1,0 +1,120 @@
+body {
+    background: #020617;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.room-container {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #0f172a;
+    border-radius: 12px;
+}
+
+/* Inputs */
+input {
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.btn.join {
+    background: #facc15;
+    color: #000;
+}
+
+.btn.send {
+    background: #2563eb;
+}
+
+.btn.leave {
+    background: #64748b;
+}
+
+.btn.danger {
+    background: #dc2626;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Join username section */
+.join-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Users */
+.users ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.users li {
+    background: #020617;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+/* Chat */
+.chat {
+    margin-top: 15px;
+}
+
+#chatBox {
+    height: 260px;
+    background: #020617;
+    border-radius: 6px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .room-container {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .join-section,
+    .chat-input,
+    .actions {
+        flex-direction: column;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+}

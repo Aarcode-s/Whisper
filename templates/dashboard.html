@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+
+    <h1>Room Dashboard</h1>
+
+    <!-- JOIN ROOM -->
+    <form action="/join_room" method="POST" class="card">
+        <input
+            type="text"
+            name="room_code"
+            placeholder="Enter Room Code"
+            required
+        >
+        <button type="submit" class="btn join">Join Room</button>
+    </form>
+
+    <!-- CREATE ROOM -->
+    <form action="/create_room" method="POST" class="card">
+        <button type="submit" class="btn create">Create New Room</button>
+    </form>
+
+</div>
+{% endblock %}
+
+
+{% block js %}
+<script src="{{ url_for('static', filename='javascript/dashboard.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Room{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/room.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="room-container">
+
+    <!-- USERNAME JOIN (Socket-level, NOT dashboard logic) -->
+    <div class="join-section">
+        <input id="username" placeholder="Enter username">
+        <button id="joinBtn" class="btn join">Join</button>
+    </div>
+
+    <!-- USERS -->
+    <section class="users">
+        <h3>Users</h3>
+        <ul id="usersList"></ul>
+    </section>
+
+    <!-- CHAT -->
+    <section class="chat">
+        <div id="chatBox"></div>
+
+        <div class="chat-input">
+            <input id="messageInput" placeholder="Type message">
+            <button id="sendBtn" class="btn send">Send</button>
+        </div>
+    </section>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+        <button id="leaveBtn" class="btn leave">Leave</button>
+        <button id="deleteBtn" class="btn danger">Delete Room</button>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+    const ROOM_CODE = "{{ room_code }}";
+</script>
+<script src="{{ url_for('static', filename='javascript/room.js') }}"></script>
+{% endblock %}
