@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Room{% endblock %}
+{% block title %}Room {{ room_code }}{% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/room.css') }}">
@@ -9,7 +9,14 @@
 {% block content %}
 <div class="room-container">
 
-    <!-- USERNAME JOIN (Socket-level, NOT dashboard logic) -->
+    <!-- ROOM CODE DISPLAY -->
+    <div class="room-code-box">
+        <span>Room Code</span>
+        <strong id="roomCode">{{ room_code }}</strong>
+        <button id="copyCodeBtn">Copy</button>
+    </div>
+
+    <!-- USERNAME JOIN -->
     <div class="join-section">
         <input id="username" placeholder="Enter username">
         <button id="joinBtn" class="btn join">Join</button>
