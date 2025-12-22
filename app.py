@@ -31,7 +31,7 @@ def generate_room_code():
 def dashboard():
     return render_template('dashboard.html')
 
-@app.route('/create_room', methods=['POST'])
+@app.route('/create_room', methods=['GEt', 'POST'])
 def create_room():
     room_code = generate_room_code()
 
