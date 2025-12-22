@@ -6,7 +6,7 @@ body {
 
 /* Container */
 .room-container {
-    max-width: 720px;
+    max-width: 80%;
     margin: 40px auto;
     padding: 20px;
     background: #0f172a;
@@ -56,6 +56,7 @@ input {
 
 /* Buttons */
 .btn {
+    width: 20%;
     padding: 12px;
     border-radius: 6px;
     border: none;
