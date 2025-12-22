@@ -42,7 +42,7 @@ def create_room():
 
     return redirect(url_for('room', room_code=room_code))
 
-@app.route('/room/<room_code>')
+@app.route('/join_room', methods=['POST'])
 def room(room_code):
     if room_code not in rooms:
         return "Room does not exist!", 404
